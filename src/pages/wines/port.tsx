@@ -1,11 +1,28 @@
 import type { NextPage } from "next";
+import { Error, Loading, WineCard } from "../../components";
+import { useWineData } from "../../hooks/useWineData";
+import { Wine } from "../../types/Wine";
 
-const Port: NextPage = () => {
-  return (
-    <div>
-      <h2>여기는 Port Wine 페이지 입니다.</h2>
-    </div>
-  );
+const PortWinePage: NextPage = () => {
+    const name = 'port';
+    const { data, error } = useWineData(name);
+
+    if(error) return <Error />
+    if(!data) return <Loading />
+
+    return (
+        <div>
+            <a href="./">Back</a>
+            <h1>Port Wine List</h1>
+            <main>
+                {data.map((wineData: Wine) => {
+                    return (
+                        <WineCard key={`port-wine-list-${wineData.id}`} wineData={wineData}/>
+                    )
+                })}
+            </main>
+        </div>
+    );
 };
 
-export default Port;
+export default PortWinePage;
