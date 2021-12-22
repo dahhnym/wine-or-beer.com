@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { Error, Loading, BeerCard } from "../../components";
 import { useBeersData } from "../../hooks/useBeersData";
 import { Beer } from "../../types/Beer";
+import { ButtonBack } from "../../components/ButtonGoBack";
 
 
 const AlePage: NextPage = () => {
@@ -13,7 +14,7 @@ const AlePage: NextPage = () => {
 
   return (
     <div>
-      <a href="./">Back</a>
+      <ButtonBack />
       <h1>Ale List</h1>
       <main>
             {data.map((beerData: Beer) => {

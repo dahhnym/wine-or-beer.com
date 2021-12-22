@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import { Error, Loading, WineCard } from "../../components";
 import { useWineData } from "../../hooks/useWineData";
 import { Wine } from "../../types/Wine";
+import { ButtonBack } from "../../components/ButtonGoBack";
+
 
 const SparklingWinePage: NextPage = () => {
     const name = 'sparkling';
@@ -12,7 +14,7 @@ const SparklingWinePage: NextPage = () => {
 
     return (
         <div>
-            <a href="./">Back</a>
+            <ButtonBack />
             <h1>Sparkling Wine List</h1>
             <main>
                 {data.map((wineData: Wine) => {
