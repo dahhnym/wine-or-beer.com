@@ -22,7 +22,7 @@ export const WineContainer = ({ name }: WineContainerProps) => {
             <WineCardContainer>
                 {data.map((wineData: Wine) => {
                     return (
-                        <WineCard key={`port-wine-list-${wineData.id}`} wineData={wineData}/>
+                        <WineCard key={`${name}-wine-list-${wineData.id}`} wineData={wineData}/>
                     )
                 })}
             </WineCardContainer>
