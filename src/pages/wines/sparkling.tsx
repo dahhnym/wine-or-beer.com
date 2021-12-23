@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import { Error, Loading, WineCard } from "../../components";
 import { useWineData } from "../../hooks/useWineData";
-import { Wine } from "../../types/Wine";
-import { ButtonBack } from "../../components/ButtonGoBack";
+import { WineCardList } from "../../components/WineCardList";
 
 
 const SparklingWinePage: NextPage = () => {
@@ -13,17 +12,9 @@ const SparklingWinePage: NextPage = () => {
     if(!data) return <Loading />
 
     return (
-        <div>
-            <ButtonBack />
-            <h1>Sparkling Wine List</h1>
-            <main>
-                {data.map((wineData: Wine) => {
-                    return (
-                        <WineCard key={`sparkling-wine-list-${wineData.id}`} wineData={wineData}/>
-                    )
-                })}
-            </main>
-        </div>
+    <div>
+        <WineCardList name={name} />
+    </div>
     );
 };
 
