@@ -8,14 +8,11 @@ export const MEDIA_QUERY_END_POINT = {
     LARGE: '2560px'
 }
 
-export const ROUTES = {
-    BEER: {
-        MAIN: {
-            ID: 0,
-            PATH: '/beers',
-            LABEL: '맥주',
-            ORDER: 0
-        },
+export const ROUTES = [
+    {
+        ID: 0,
+        PATH: '/beer',
+        LABEL: '맥주',
         SUBS: [
             {
                 ID: 0,
@@ -25,58 +22,54 @@ export const ROUTES = {
             },
             {
                 ID: 1,
-                PATH: '/stouts',
+                PATH: '/stout',
                 LABEL: '스타우트',
                 ORDER: 1
             }
-
         ]
     },
-    WINES: {
-        MAIN: {
-            ID: 0,
-            PATH: '/wines',
-            LABEL: '와인',
-            ORDER: 0
-        },
+    {
+        ID: 1,
+        PATH: '/wines',
+        LABEL: '와인',
         SUBS: [
             {
                 ID: 0,
-                PATH: '/ale',
+                PATH: '/reds',
                 LABEL: '레드 와인',
                 ORDER: 0,
             },
             {
                 ID: 1,
-                PATH: '/stouts',
+                PATH: '/rose',
                 LABEL: '로즈 와인',
                 ORDER: 1
             },
             {
-                ID: 0,
-                PATH: '/ale',
+                ID: 2,
+                PATH: '/sparkling',
                 LABEL: '스파클링 와인',
-                ORDER: 0,
+                ORDER: 2,
             },
             {
-                ID: 1,
-                PATH: '/stouts',
+                ID: 3,
+                PATH: '/whites',
                 LABEL: '화이트 와인',
-                ORDER: 1
+                ORDER: 3
             },
             {
-                ID: 0,
-                PATH: '/ale',
+                ID: 4,
+                PATH: '/dessert',
                 LABEL: '디저트 와인',
-                ORDER: 0,
+                ORDER: 4,
             },
             {
-                ID: 1,
-                PATH: '/stouts',
+                ID: 5,
+                PATH: '/port',
                 LABEL: '포트 와인',
-                ORDER: 1
+                ORDER: 5
             }
 
         ]
     }
-}
+]
