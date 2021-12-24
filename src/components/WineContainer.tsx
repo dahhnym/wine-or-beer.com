@@ -18,7 +18,7 @@ export const WineContainer = ({ name }: WineContainerProps) => {
     return (
         <div>
             <ButtonBack />
-            <h1>{name} wine</h1>
+            <WineTitle>{name} wine</WineTitle>
             <WineCardContainer>
                 {data.map((wineData: Wine) => {
                     return (
@@ -32,12 +32,12 @@ export const WineContainer = ({ name }: WineContainerProps) => {
 
 const WineTitle = styled.h1`
     line-height: 180%;
-    border-bottom: 1px solid black;    
+    margin-left: 10px;
 `
 
 const WineCardContainer = styled.main`
     display: grid;
-    gap: 1em;
+    gap: 0.2em;
 
     @media (min-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
         grid-template-columns: repeat(2, 1fr);
@@ -45,6 +45,4 @@ const WineCardContainer = styled.main`
     @media (min-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
         grid-template-columns: repeat(4, 1fr);
     }
-    
-
 `
