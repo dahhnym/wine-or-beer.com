@@ -3,9 +3,10 @@ import React from "react";
 import { Navigation } from ".";
 
 export const Layout: React.FC = ({children}) => {
+
     return (
         <div>
-            <Navigation />
+            {/* <Navigation /> */}
             <Container>
                 { children }
             </Container>
@@ -14,6 +15,6 @@ export const Layout: React.FC = ({children}) => {
 }
 
 const Container = styled.main`
-    max-width: 1280px;
+    max-width: 1580px;
     margin: auto;
 `
