@@ -1,9 +1,16 @@
 .btnGoBack {
     display: inline-block;
-    color: teal;
-    border: solid 1px teal;
+    color: #010;
+    border: solid 1px #010;
     padding: 10px;
     font-weight: 600;
     border-radius: 10px;
     margin: 10px;
+}
+
+.btnGoBack:hover{
+    color: #fff;
+    background-color: #010;
+    border: solid 1px #010;
+    transition: .2s;
 }
