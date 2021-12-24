@@ -7,8 +7,6 @@ const StoutsPage: NextPage = () => {
 
   return (
     <div>
-      <ButtonBack />
-      <h1>{name} List</h1>
       <BeerContainer name={name} />
     </div>
   );
